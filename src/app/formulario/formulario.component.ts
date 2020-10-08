@@ -6,8 +6,9 @@ import { Pessoa } from '../model/pessoa';
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
-export class FormularioComponent implements OnInit {
-  profissoes = ['Engenheiro', 'Professor', 'Químico', 'Zoólogo'];
+export class FormularioComponent {
+  profissoes = ['Engenharia', 'Pedagogia', 'Química', 'Zoologia', 'Ciência da computação'];
+  professores=['Diego Rodales', 'Adriana Guarulhos','Pablo Escovar', 'Geraldo Monaco', 'Franchesca Pineapple','Home-lander']
   pessoa: Pessoa = new Pessoa();
   
     

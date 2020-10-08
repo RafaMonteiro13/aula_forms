@@ -3,5 +3,6 @@ export class Pessoa {
     fone: string;
     email: string;
     profissao: string
+    professores: string
 
 }

@@ -1,34 +1,162 @@
-<div class="container">
-    {{pessoa | json}}
-    <form #pessoaForm="ngForm" (ngSubmit)="salvar(pessoaForm)">
-        <div class="row">
-            <div class="form-group col-12">
-                <label for="nomeInput">Nome</label>
-                <input type="text" placeholder="nome" class="form-control p-4" name="nome" [(ngModel)]="pessoa.nome">
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-4">
-                <label for="foneInput">Fone</label>
-                <input type="text" placeholder="fone" class="form-control p-4" name="fone" [(ngModel)]="pessoa.fone">
-            </div>
-            <div class="form-group col-md-4">
-                <label for="emailInput">Email</label>
-                <input type="text" placeholder="email" class="form-control p-4" name="email" [(ngModel)]="pessoa.email">
-            </div>
-            <div class="form-group col-md-4">
-                <label for="profissaoInput">Profissão</label>
-                <select name="" id="profissaoInput" class="form-control" name="profissao"
-                    [(ngModel)]="pessoa.profissao">
-                    <option value="">Selecione</option>
-                    <option *ngFor="let p of profissoes">{{p}}</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-            </div>
-        </div>
-    </form>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Escola do futuro</title>
+
+</head>
+
+
+<h1 class="text-center border bg-success">
+    University James Arthur
+</h1>
+
+<div class="form-group col-12">
+    <label for="profissaoInput">Cursos</label>
+    <select name="" id="profissaoInput" class="form-control" name="profissao" [(ngModel)]="pessoa.profissao">
+        <option value="Selecione"></option>
+        <option *ngFor="let p of profissoes">{{p}}</option>
+    </select>
 </div>
+
+<div class="form-group col-12">
+    <label for="professoresInput">Professores</label>
+    <select name="" id="professoresInput" class="form-control" name="professores" [(ngModel)]="pessoa.professores">
+        <option value="Selecione"></option>
+        <option *ngFor="let p of professores">{{p}}</option>
+    </select>
+</div>
+
+
+
+<body>
+
+    <div class="container border mt-2 p-4 mb-5 ">
+
+        <div class="row">
+
+            <div class="col-12 border mt-2">
+                Descrição cursos:
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-12 border mt-2">
+                Engenharia: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde quasi neque similique
+                pariatur ipsa ea. Beatae doloribus fuga quibusdam! Voluptate iusto maxime nostrum, consequuntur impedit
+                placeat vitae quibusdam ullam ut accusantium consectetur molestias debitis esse delectus odit recusandae
+                tenetur quis exercitationem accusamus iure totam mollitia! Iusto, quod. Architecto voluptatibus soluta
+                ipsa laborum repudiandae, cum maiores rem non ab nam exercitationem voluptas, nesciunt dolores? Aliquid
+                quasi vitae reprehenderit delectus possimus praesentium, placeat, ipsa cumque a fuga, nulla officiis
+                totam fugit. Impedit minima quam aut numquam placeat eum, reprehenderit totam est. Illo error odio
+                deserunt id sequi eaque doloribus ex ullam fugit.
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-12 border mt-2">
+                Pedagogia: Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatibus velit aliquam
+                atque exercitationem odit illum, deleniti, eaque hic, quidem minima molestiae nulla earum doloremque
+                repellat sit maiores. Quasi dignissimos vero, numquam maxime perspiciatis iusto id fugiat possimus. Quis
+                illo non, deleniti at suscipit doloremque neque sit ex ipsam est dolorem atque. Vitae assumenda eum
+                dolorem rem quasi obcaecati itaque debitis omnis amet ducimus autem voluptatum sit dicta, corporis ut
+                hic quisquam recusandae, excepturi ipsa?
+            </div>
+            <div class="col-12 border mt-2">
+                Quimica: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut quo expedita
+                reprehenderit obcaecati numquam itaque, amet sequi, voluptates tempora, doloremque hic molestias culpa?
+                Reiciendis saepe quidem obcaecati repudiandae fugit, laboriosam aspernatur sint. Ipsam, optio labore
+                pariatur aliquid ipsa omnis quisquam deserunt cupiditate velit fugiat earum dignissimos maxime
+                laudantium eaque.
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-12 border mt-2">
+                Zoologia: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, nisi ex nam modi perspiciatis
+                assumenda provident quam optio ratione consectetur voluptatum officiis sed reiciendis fugiat debitis
+                iste dignissimos saepe vitae. Inventore voluptatem quam rem repellat eum doloribus nobis accusamus quasi
+                odit voluptatum! Consequuntur doloribus nesciunt praesentium ipsa soluta nulla iusto nam et provident
+                impedit. Nemo, excepturi quae sapiente non provident deleniti officia quam eligendi fuga quasi quaerat,
+                iste assumenda quis sit nam quibusdam deserunt ducimus dolore ea maiores! Distinctio, quas.
+            </div>
+
+            <div class="col-12 border mt-2">
+                Ciência da computação: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, labore
+                magnam ullam explicabo quasi consequatur quo nemo eum placeat. Nisi fugiat veniam sit laudantium
+                possimus ipsa, facere non provident debitis architecto similique maxime alias ipsum odio magni labore
+                consequuntur aliquid dicta eligendi atque voluptatibus, ea quibusdam. Nesciunt totam illum dolores
+                eveniet voluptatem, sapiente laboriosam ratione repudiandae corporis eos? Eius laudantium, nobis
+                pariatur quasi velit ea cum porro commodi cupiditate modi deserunt necessitatibus, iusto repellat
+                voluptates dolor dolorem quaerat aspernatur ullam earum quia nulla qui! Aliquid sed doloribus, quo neque
+                possimus consequatur laboriosam provident. Corporis nulla omnis voluptas id facere quis, pariatur,
+                dolores consequuntur atque quia sint, in sapiente natus sunt quae? Cumque dignissimos consectetur
+                eveniet accusamus? Quae quidem accusantium vel.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container border mt-2 p-4 mb-5">
+        <div class="row">
+
+            <div class="col-md-8 border my-2">
+                Venha conversar conosco e conhecer nossas ofertas de bolsas de estudos.
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-8 border my-2">
+                Nossa equipe de coordenadores, está preparada para sanar suas eventuais dúvidas.
+            </div>
+        </div>
+    </div>
+
+    <div class="container border mt-2 p-4 mb-5">
+        <div class="row">
+            <div class="col-4 border my-2 order-2">
+                E-mail: uniescolafuturo@gmail.com
+            </div>
+            <div class="col-4 border my-2 order-3">
+                Twitter: @escolafutuo666
+            </div>
+            <div class="col-4 border my-2 order-1">
+                Telefone: (11)999920073
+            </div>
+            <div class="col-12 border my-2">
+                Todos os direitos reservados.
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
